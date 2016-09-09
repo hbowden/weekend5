@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="row">
+    <div class="col-md-1 bottom-buffer"></div>
+    <div class="col-md-5 bottom-buffer">
+      <form id="animalChoice">
+        <select class="drop-down" ng-model="selectedAnimal">
+        <option>barnyard</option>
+        <option>bird</option>
+        <option>cat</option>
+        <option>dog</option>
+        <option>horse</option>
+        <option>pig</option>
+        <option>reptile</option>
+        <option>smallfurry</option>
+        </select>
+        <button ng-click="handleAnimalPick()">Pick</button>
+        <button ng-click="addFav(animal.id.$t, animal.animal.$t, animal.description.$t, animal.media.photos.photo[1].$t, animal.name.$t)" class="fav">Add to Favorites</button>
+      </form>
+      <h2>Favorite Count: {{count[0].count}}</h2>
+    </div>
+  </div>
+
+  <div class="row content">
+    <div class="col-md-1 bottom-buffer"></div>
+    <div class="col-md-5 bottom-buffer">
+      <img class="pic" ng-src="{{animal.media.photos.photo[2].$t}}" />
+    </div>
+    <div class="col-md-5 bottom-buffer">
+      <h2>{{animal.name.$t}}</h2>
+      <p>{{animal.description.$t}}</p>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+
+</div>
